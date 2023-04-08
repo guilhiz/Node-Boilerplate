@@ -2,13 +2,12 @@
   "name": "boilerplate-node",
   "version": "1.0.0",
   "description": "boilerplate node com typescript",
-  "main": "build/app.js",
+  "main": "build/server.js",
   "type": "module",
   "scripts": {
-    "start": "node build/app.js",
+    "start": "node build/server.js",
     "build": "tsc",
-    "nodemon": "nodemon src/app.ts",
-    "dev": "tsx watch ./src/app.ts",
+    "dev": "tsx watch ./src/server.ts",
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "repository": {
@@ -44,7 +43,6 @@
     "chalk": "^5.2.0",
     "ts-node": "^10.9.1",
     "tsx": "^3.12.6",
-    "typescript": "^5.0.4",
-    "typescript-transform-paths": "^3.4.6"
+    "typescript": "^5.0.4"
   }
 }
