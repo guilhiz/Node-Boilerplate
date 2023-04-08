@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "boilerplate node com typescript",
   "main": "build/server.js",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "start": "node build/server.js",
     "build": "tsc",
