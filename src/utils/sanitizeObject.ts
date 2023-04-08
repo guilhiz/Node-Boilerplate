@@ -1,13 +1,13 @@
 import { stripHtml } from "string-strip-html";
 
-type SanitizeProps = { [key: string]: any };
-
-const sanitizeObject = (object: SanitizeProps) => {
+const sanitizeObject = (
+  object: Record<string, unknown>
+): Record<string, unknown> => {
   for (const key of Object.keys(object)) {
     if (typeof object[key] === "string") {
-      object[key] = stripHtml(object[key]).result.trim();
-    } else if (typeof object[key] === "object") {
-      object[key] = sanitizeObject(object[key]);
+      object[key] = stripHtml(object[key] as string).result.trim();
+    } else if (typeof object[key] === "object" && object[key] !== null) {
+      object[key] = sanitizeObject(object[key] as Record<string, unknown>);
     }
   }
 
