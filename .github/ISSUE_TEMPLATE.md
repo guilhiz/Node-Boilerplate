@@ -29,6 +29,7 @@
 
 <!--
    If you have attempted to solve this issue before, describe what you have tried here.
+   Example: "I have tried clearing my browser cache and cookies, but the issue still persists."
 -->
 
 (Write here.)
