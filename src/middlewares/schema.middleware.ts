@@ -1,24 +1,22 @@
-import { Schema, ZodIssue } from "zod";
+import { Schema, ZodIssue } from 'zod';
 
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response } from 'express';
 
-import erros from "../erros";
-import sanitizeObject from "../utils/sanitizeObject";
+import erros from '../erros';
+import sanitizeObject from '../utils/functions/sanitizeObject';
 
 const schemaMiddleware = (schema: Schema) => {
   return (req: Request, res: Response, next: NextFunction) => {
     res.locals.sanitizedRequest = sanitizeObject({
       ...req.params,
       ...req.body,
-      ...req.query,
+      ...req.query
     });
     const result = schema.safeParse(res.locals.sanitizedRequestData);
 
-    if (!result.success && "error" in result) {
+    if (!result.success && 'error' in result) {
       const errorMessages = result.error.issues.map((issue: ZodIssue) => {
-        return issue.path
-          ? `${issue.path.join(".")}: ${issue.message}`
-          : issue.message;
+        return issue.path ? `${issue.path.join('.')}: ${issue.message}` : issue.message;
       });
 
       throw erros.unprocessableEntityError(errorMessages);
