@@ -1,20 +1,16 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from 'express';
 
-import erros from "../erros/index.js";
+import erros from '../erros/index.js';
 // import jwt from "jsonwebtoken";
-import "dotenv/config";
+import 'dotenv/config';
 
 // type JWTPayload = {
 //   userId: number;
 // };
 
-const tokenMiddleware = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+const tokenMiddleware = async (req: Request, res: Response, next: NextFunction) => {
   const { authorization } = req.headers;
-  const token = authorization?.split(" ")[1]?.trim();
+  const token = authorization?.split(' ')[1]?.trim();
 
   if (!token) throw erros.unauthorizedError();
 

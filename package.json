@@ -11,7 +11,7 @@
     "build": "tsc",
     "postinstall": "husky install",
     "dev": "tsx watch ./src/server.ts",
-    "lint": "eslint . --max-warnings=0",
+    "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "husky": {
