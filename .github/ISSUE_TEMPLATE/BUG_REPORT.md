@@ -7,7 +7,7 @@
 
 (Write here.)
 
-## 🚀 Steps to Reproduce (if applicable)
+## 🚀 Steps to Reproduce
 
 <!--
    If the issue is related to a bug or error, include steps to reproduce the issue here.
@@ -16,7 +16,7 @@
 
 (Write here.)
 
-## 👀 Expected Behavior (if applicable)
+## 👀 Expected Behavior
 
 <!--
    If the issue is related to a bug or error, describe the expected behavior.
