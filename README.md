@@ -1,2 +1,78 @@
-# template-node
-Template node com typescript
+<h1 align="center">My Node Boilerplate with TypeScript</h1>
+
+
+## :gear: Configs
+- :arrows_counterclockwise: [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file) — Automated dependency updates for GitHub repositories.
+- :diamond_shape_with_a_dot_inside: [Express](http://expressjs.com/pt-br/) —  Fast, flexible web framework for Node.js
+- :elephant: [PG](https://node-postgres.com/) —  Node.js driver for PostgreSQL
+- :sparkles: [TSX](https://www.npmjs.com/package/tsx) — Node.js library with esbuild to run TypeScript & ESM files
+- :wrench: [ESLint](https://eslint.org/) — Pluggable JavaScript linter
+- :art: [Prettier](https://prettier.io/) — Opinionated Code Formatter
+- :pencil: [Commitzen](https://github.com/commitizen/cz-cli) — Git commit message helper
+- :dog: [Husky](https://typicode.github.io/husky/#/) — Use git hooks with ease
+- :no_entry_sign: [Lint-staged](https://github.com/okonet/lint-staged) — Run linters against staged git files
+### Libs
+- :lock: [Zod](https://zod.dev/) — TypeScript-first schema validation.
+- :key: [JWT](https://jwt.io/) — JSON Web Token implementation.
+- :closed_lock_with_key: [Bcrypt](https://www.npmjs.com/package/bcrypt) — Library for hashing passwords.
+- :shield: [Helmet](https://www.npmjs.com/package/helmet) — Express middleware for securing HTTP headers.
+- :scissors: [String-strip-html](https://www.npmjs.com/package/string-strip-html) — Remove HTML tags from a string.
+
+## :rocket: Getting Started
+
+To use this boilerplate as a template for your own project, follow these steps:
+
+  - Click on the `Use this template` button on this repository page to create a new repository from this template.
+  - Choose a name and configure the new repository as desired.
+  - Clone the newly created repository to your local machine with the following command in your terminal:
+
+```shel
+git clone https://github.com/<YOUR_USERNAME>/<YOUR_PROJECT_NAME>.git
+```
+
+After cloning the repository, run the following commands inside the project folder:
+- Install the dependencies with `npm install`
+- Run the project with `npm run dev`
+
+## :file_folder: Main File Structure
+
+```ts
+├── 📁.github // GitHub workflows
+├── 📁.husky // Git hooks
+|
+├── 📁src
+|   ├── 📁configs // Application configurations
+|   |   └──📄database.connection // Database connection settings
+|   | 
+|   ├── 📁controllers // Request controllers
+|   ├── 📁errors // Custom error classes
+|   ├── 📁middlewares // Middleware functions
+|   ├── 📁repositories // Data access layer
+|   ├── 📁routes  // Application routes
+|   ├── 📁schemas // Request schemas
+|   ├── 📁services // Business logic layer
+|   ├── 📁utils // General utilities
+|   |   ├──📁constants // Global constants
+|   |   └──📁functions // Utility functions
+|   |
+|   └── 📄server.ts // Application entry point
+|
+├── 📄.env.example // Example environment variables
+├── 📄.eslintrc.json // ESLint configuration file
+├── 📄.prettierrc // Prettier configuration file
+├── 📄README.md // Project documentation
+├── 📄package.json // NPM package configuration file
+└── 📄tsconfig.json // TypeScript configuration file
+
+```
+
+## :handshake: Contributing
+
+If you want to contribute to this template, follow these steps:
+
+- Fork this repository
+- Create a new branch with their feature using `git checkout -b my-feature`.
+- Commit their changes using `git commit -m 'Adding new feature'`.
+- Push the changes to their branch using `git push origin my-feature`.
+- Open a pull request on your repository.
+
