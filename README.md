@@ -32,6 +32,7 @@ git clone https://github.com/<YOUR_USERNAME>/<YOUR_PROJECT_NAME>.git
 
 After cloning the repository, run the following commands inside the project folder:
 - Install the dependencies with `npm install`
+- Configure the environment variables based on the `.env.example`
 - Run the project with `npm run dev`
 
 ## :file_folder: Main File Structure
