@@ -1,12 +1,13 @@
+import jwt from 'jsonwebtoken';
+
 import { Request, Response, NextFunction } from 'express';
 
 import erros from '../erros/index.js';
-// import jwt from "jsonwebtoken";
 import 'dotenv/config';
 
-// type JWTPayload = {
-//   userId: number;
-// };
+type JWTPayload = {
+  userId: number;
+};
 
 const tokenMiddleware = async (req: Request, res: Response, next: NextFunction) => {
   const { authorization } = req.headers;
@@ -15,8 +16,8 @@ const tokenMiddleware = async (req: Request, res: Response, next: NextFunction) 
   if (!token) throw erros.unauthorizedError();
 
   try {
-    // const { userId } = jwt.verify(token, process.env.SECRET_KEY) as JWTPayload;
-    // res.locals.userId = userId;
+    const { userId } = jwt.verify(token, process.env.SECRET_KEY!) as JWTPayload;
+    res.locals.userId = userId;
   } catch {
     throw erros.unauthorizedError();
   }
