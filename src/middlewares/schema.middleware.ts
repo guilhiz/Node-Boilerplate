@@ -3,7 +3,7 @@ import { Schema, ZodIssue } from 'zod';
 import { NextFunction, Request, Response } from 'express';
 
 import erros from '../erros';
-import sanitizeObject from '../utils/functions/sanitizeObject';
+import sanitizeObject from '../utils/functions/sanitizeObject.js';
 
 const schemaMiddleware = (schema: Schema) => {
   return (req: Request, res: Response, next: NextFunction) => {

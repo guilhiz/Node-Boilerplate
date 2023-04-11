@@ -16,7 +16,7 @@ const tokenMiddleware = async (req: Request, res: Response, next: NextFunction) 
   if (!token) throw erros.unauthorizedError();
 
   try {
-    const { userId } = jwt.verify(token, process.env.SECRET_KEY!) as JWTPayload;
+    const { userId } = jwt.verify(token, process.env.JWT_SECRET!) as JWTPayload;
     res.locals.userId = userId;
   } catch {
     throw erros.unauthorizedError();

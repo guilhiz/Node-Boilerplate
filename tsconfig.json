@@ -1,19 +1,22 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "commonjs",
+    "module": "ESNext",
     "outDir": "build",
     "sourceMap": true,
     "strict": true,
-    "allowJs": false,
+    "allowJs": true,
     "esModuleInterop": true,
     "rootDir": "./src",
     "moduleResolution": "node",
     "noImplicitAny": true,
+    "skipLibCheck": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true
+    "experimentalDecorators": true
   },
-  "include": ["./src/**/*"],
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["./src/**/*.ts"],
   "exclude": ["node_modules", "build"]
 }

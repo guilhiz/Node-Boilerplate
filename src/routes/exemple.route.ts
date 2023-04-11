@@ -1,12 +1,12 @@
 import { Router } from 'express';
-// import schemaMiddleware from "../middlewares/schema.middleware";
+// import schemaMiddleware from "../middlewares/schema.middleware.js";
 
-const exempleRouter = Router();
+const exampleRouter = Router();
 
-// exempleRouter.post("/", schemaMiddleware());
+// exampleRouter.post("/", schemaMiddleware());
 
 // exempleRouter.get("/", schemaMiddleware());
 
 // outras rotas aqui
 
-export default exempleRouter;
+export default exampleRouter;

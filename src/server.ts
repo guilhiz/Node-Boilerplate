@@ -6,8 +6,8 @@ import helmet from 'helmet';
 
 import express, { json } from 'express';
 
-import handleApplicationErrors from './middlewares/error.middleware';
-import routes from './routes';
+import handleApplicationErrors from './middlewares/error.middleware.js';
+import routes from './routes/index.js';
 
 dotenv.config();
 

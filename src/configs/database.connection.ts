@@ -1,7 +1,10 @@
 import chalk from 'chalk';
 import dotenv from 'dotenv';
+import dotenvExpand from 'dotenv-expand';
 import pg from 'pg';
-dotenv.config();
+
+const currentEnv = dotenv.config();
+dotenvExpand.expand(currentEnv);
 
 const { Pool } = pg;
 

@@ -1,4 +1,4 @@
-// import db from '../configs/database.connection';
+// import db from '../configs/database.connection.js';
 // import { z } from 'zod';
 
 // const exampleQuery = async ({}) => {
