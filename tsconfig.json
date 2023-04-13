@@ -12,7 +12,8 @@
     "noImplicitAny": true,
     "skipLibCheck": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true
   },
   "ts-node": {
     "esm": true
