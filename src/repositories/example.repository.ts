@@ -1,10 +1,9 @@
-// import db from '../configs/database.connection.js';
-// import { z } from 'zod';
+import prisma from '../configs/database.connection';
 
-// const exampleQuery = async ({}) => {
-//   return db.query(``, []);
-// };
+const exampleQuery = async () => {
+  return prisma.cars.findMany();
+};
 
-// export default {
-//   exampleQuery
-// };
+export default {
+  exampleQuery
+};

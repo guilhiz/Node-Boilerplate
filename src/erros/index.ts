@@ -4,21 +4,21 @@ const createError = (status: number, name: string, message: string) => ({
   message
 });
 
-const unauthorizedError = () => createError(401, 'UnauthorizedError', 'You must be signed in to continue');
+const unauthorizedError = () => createError(401, 'UnauthorizedError', 'You are not authorized to perform this action.');
 
-const invalidCredentialsError = () => createError(401, 'InvalidCredentialsError', 'Invalid email or password');
+const invalidCredentialsError = () => createError(401, 'InvalidCredentialsError', 'Incorrect email or password.');
 
-const notFoundError = () => createError(404, 'NotFoundError', 'No results found for this search!');
+const notFoundError = (resource: string) => createError(404, 'NotFoundError', `No ${resource} found.`);
 
-const duplicatedUserError = () => createError(409, 'DuplicatedUserError', 'User already exists');
+const duplicatedError = () => createError(409, 'DuplicatedError', 'Duplicate resource found');
 
 const unprocessableEntityError = (message: string[]) =>
-  createError(422, 'UnprocessableEntityError', `The request body did not match the expected schema: ${message}`);
+  createError(422, 'UnprocessableEntityError', `Invalid request data: ${message}`);
 
 export default {
   unauthorizedError,
   notFoundError,
   invalidCredentialsError,
-  duplicatedUserError,
+  duplicatedError,
   unprocessableEntityError
 };
