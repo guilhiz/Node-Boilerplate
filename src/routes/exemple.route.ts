@@ -1,5 +1,5 @@
 import { Router } from 'express';
-// import schemaMiddleware from "../middlewares/schema.middleware.js";
+// import schemaMiddleware from "../middlewares/schema.middleware";
 
 const exampleRouter = Router();
 
