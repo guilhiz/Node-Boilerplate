@@ -8,9 +8,20 @@
     "start": "node build/server.js",
     "build": "tsup src --out-dir build",
     "postinstall": "husky install",
-    "dev": "tsx watch src/server.ts",
     "lint": "eslint src --max-warnings=0",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "test:load-envs": "dotenv -e .env.test",
+    "dev:load-envs": "dotenv -e .env.development",
+    "test": "cross-env NODE_ENV=test jest --runInBand",
+    "test:watch": "cross-env NODE_ENV=test jest --watch --runInBand",
+    "test:coverage": "cross-env NODE_ENV=test jest --runInBand --coverage --collectCoverageFrom='./src/**'",
+    "test:migration:run": "npm run test:load-envs prisma migrate deploy",
+    "test:migration:generate": "npm run test:load-envs prisma migrate dev",
+    "test:seed": "npm run test:load-envs prisma db seed",
+    "dev:migration:run": "npm run dev:load-envs prisma migrate deploy",
+    "dev:migration:generate": "npm run dev:load-envs prisma migrate dev",
+    "dev:seed": "npm run dev:load-envs prisma db seed",
+    "dev": "cross-env NODE_ENV=development tsx watch src/server.ts"
   },
   "husky": {
     "hooks": {
