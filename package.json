@@ -10,8 +10,8 @@
     "postinstall": "husky install",
     "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "test:load-envs": "dotenv -e .env.test",
-    "dev:load-envs": "dotenv -e .env.development",
+    "test:load-envs": "dotenv -e envs/.env.test",
+    "dev:load-envs": "dotenv -e envs/.env.development",
     "test": "cross-env NODE_ENV=test jest --runInBand",
     "test:watch": "cross-env NODE_ENV=test jest --watch --runInBand",
     "test:coverage": "cross-env NODE_ENV=test jest --runInBand --coverage --collectCoverageFrom='./src/**'",
@@ -27,6 +27,9 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "prisma": {
+    "seed": "npm run dev:load-envs -- tsx prisma/seed.ts"
   },
   "lint-staged": {
     "src/**/*": [
@@ -66,7 +69,9 @@
     "@typescript-eslint/parser": "^5.57.1",
     "chalk": "^5.2.0",
     "commitizen": "^4.3.0",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
+    "dotenv-cli": "^7.2.1",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import-helpers": "^1.3.1",
