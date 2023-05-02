@@ -1,7 +1,6 @@
-// import erros from '../erros/index';
-// import { z } from 'zod';
+// import erros from '../erros';
 
-// const create = async ({}: z.infer<typeof exampleSchema>) => {};
+// const create = async ({}) => {};
 
 // export default {
 //   create

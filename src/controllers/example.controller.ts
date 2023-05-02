@@ -1,10 +1,10 @@
 import chalk from 'chalk';
 
 import { Request, Response, NextFunction } from 'express';
-// import { z } from "zod";
+// import { exampleProps } from '../@types';
 
 const create = async (req: Request, res: Response, next: NextFunction) => {
-  // const { name, password } = res.locals.sanitizedRequest as z.infer<typeof exampleSchema>;
+  // const { email, password } = res.locals.sanitizedRequest as exampleProps;
   console.log(chalk.cyan('POST /example'));
 
   try {
