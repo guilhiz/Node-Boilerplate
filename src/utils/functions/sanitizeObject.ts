@@ -1,6 +1,6 @@
 import { stripHtml } from 'string-strip-html';
 
-const sanitizeObject = (object: Record<string, unknown>): Record<string, unknown> => {
+export const sanitizeObject = (object: Record<string, unknown>): Record<string, unknown> => {
   for (const key of Object.keys(object)) {
     if (typeof object[key] === 'string') {
       object[key] = stripHtml(object[key] as string).result.trim();
@@ -11,5 +11,3 @@ const sanitizeObject = (object: Record<string, unknown>): Record<string, unknown
 
   return object;
 };
-
-export default sanitizeObject;
