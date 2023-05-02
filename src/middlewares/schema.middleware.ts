@@ -12,7 +12,7 @@ const schemaMiddleware = (schema: Schema) => {
       ...req.body,
       ...req.query
     });
-    const result = schema.safeParse(res.locals.sanitizedRequestData);
+    const result = schema.safeParse(res.locals.sanitizedRequest);
 
     if (!result.success && 'error' in result) {
       const errorMessages = result.error.issues.map((issue: ZodIssue) => {

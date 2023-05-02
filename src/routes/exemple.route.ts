@@ -1,5 +1,5 @@
 // import { Router } from 'express';
-// import authMiddleware from '../middlewares/auth.middleware';
+// import tokenMiddleware from "../middlewares/token.middleware";
 // import schemaMiddleware from "../middlewares/schema.middleware";
 
 // const exampleRouter = Router();
