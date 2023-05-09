@@ -19,7 +19,7 @@
 - :microscope: [Jest](https://jestjs.io/pt-BR/) — A popular JavaScript testing framework
 - :closed_lock_with_key: [Bcrypt](https://www.npmjs.com/package/bcrypt) — Library for hashing passwords.
 - :shield: [Helmet](https://www.npmjs.com/package/helmet) — Express middleware for securing HTTP headers.
-- :scissors: [saniteze-html](https://www.npmjs.com/package/sanitize-html) — Remove HTML tags from a string.
+- :scissors: [Saniteze-html](https://www.npmjs.com/package/sanitize-html) — Remove HTML tags from a string.
 
 ## :rocket: Getting Started
 
