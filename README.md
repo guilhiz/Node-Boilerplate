@@ -4,8 +4,10 @@
 ## :gear: Configs
 - :arrows_counterclockwise: [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file) — Automated dependency updates for GitHub repositories.
 - :diamond_shape_with_a_dot_inside: [Express](http://expressjs.com/pt-br/) —  Fast, flexible web framework for Node.js
-- :elephant: [PG](https://node-postgres.com/) —  Node.js driver for PostgreSQL
+- :card_file_box: [Prisma](https://www.prisma.io/) — A modern database ORM
 - :sparkles: [TSX](https://www.npmjs.com/package/tsx) — Node.js library with esbuild to run TypeScript & ESM files
+- :zap: [TSUP](https://tsup.egoist.dev/) — A fast and flexible TypeScript building tool
+- :file_folder: [Dotenv-cli](https://www.npmjs.com/package/dotenv-cli) — To load multiple environment variables files
 - :wrench: [ESLint](https://eslint.org/) — Pluggable JavaScript linter
 - :art: [Prettier](https://prettier.io/) — Opinionated Code Formatter
 - :pencil: [Commitzen](https://github.com/commitizen/cz-cli) — Git commit message helper
@@ -14,9 +16,10 @@
 ### Libs
 - :lock: [Zod](https://zod.dev/) — TypeScript-first schema validation.
 - :key: [JWT](https://jwt.io/) — JSON Web Token implementation.
+- :microscope: [Jest](https://jestjs.io/pt-BR/) — A popular JavaScript testing framework
 - :closed_lock_with_key: [Bcrypt](https://www.npmjs.com/package/bcrypt) — Library for hashing passwords.
 - :shield: [Helmet](https://www.npmjs.com/package/helmet) — Express middleware for securing HTTP headers.
-- :scissors: [String-strip-html](https://www.npmjs.com/package/string-strip-html) — Remove HTML tags from a string.
+- :scissors: [saniteze-html](https://www.npmjs.com/package/sanitize-html) — Remove HTML tags from a string.
 
 ## :rocket: Getting Started
 
@@ -32,7 +35,7 @@ git clone https://github.com/<YOUR_USERNAME>/<YOUR_PROJECT_NAME>.git
 
 After cloning the repository, run the following commands inside the project folder:
 - Install the dependencies with `npm install`
-- Configure the environment variables based on the `.env.example`
+- Configure the environment variables based on the `.env.examples`
 - Run the project with `npm run dev`
 
 ## :file_folder: Main File Structure
@@ -40,11 +43,11 @@ After cloning the repository, run the following commands inside the project fold
 ```ts
 ├── 📁.github // GitHub workflows
 ├── 📁.husky // Git hooks
+├── 📁.envs // Environment variables
+├── 📁.prisma // Prisma ORM configuration
 |
 ├── 📁src
 |   ├── 📁configs // Application configurations
-|   |   └──📄database.connection // Database connection settings
-|   | 
 |   ├── 📁controllers // Request controllers
 |   ├── 📁errors // Custom error classes
 |   ├── 📁middlewares // Middleware functions
@@ -56,11 +59,17 @@ After cloning the repository, run the following commands inside the project fold
 |   |   ├──📁constants // Global constants
 |   |   └──📁functions // Utility functions
 |   |
-|   └── 📄server.ts // Application entry point
+|   ├── 📄app.ts // Express app configuration
+|   └── 📄server.ts // Server entry point
 |
-├── 📄.env.example // Example environment variables
+├── 📁tests
+|   ├── 📁factories // Test data factories
+|   ├── 📁integration // Integration tests
+|   └── 📁unit // Unit tests
+|
 ├── 📄.eslintrc.json // ESLint configuration file
 ├── 📄.prettierrc // Prettier configuration file
+├── 📄jest.config.ts // Jest configuration file
 ├── 📄README.md // Project documentation
 ├── 📄package.json // NPM package configuration file
 └── 📄tsconfig.json // TypeScript configuration file
