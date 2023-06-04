@@ -77,6 +77,14 @@ After cloning the repository, run the following commands inside the project fold
 
 ```
 
+## :octocat: How to use commitzen
+
+1. Run `git add` to stage changes
+2. Run `git commit` without providing a message to use Commitzen
+3. Use the Commitzen interface to write and confirm the commit message
+
+[commitzen](https://user-images.githubusercontent.com/109693663/227851152-e4332627-9841-4589-8785-65763f4a0abe.mp4)
+
 ## :handshake: Contributing
 
 If you want to contribute to this template, follow these steps:
